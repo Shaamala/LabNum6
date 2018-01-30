@@ -17,11 +17,11 @@ public class LabNum6 {
 		// loop to check if the user want to continue
 		while (cont.equalsIgnoreCase("y")) {
 
-			System.out.println("Please enter word you want translate: ");
+			System.out.println("Please enter sentence you want translate: ");
 			System.out.println("");
-			String englisSentence = scan.nextLine();
+			String eSentence = scan.nextLine();
 			// change the word to lower case
-			// englisSentence.toLowerCase();
+			String englisSentence = eSentence.toLowerCase();
 
 			// split the sentence to single words
 			String[] wordEnglish = englisSentence.split(" ");
@@ -32,10 +32,10 @@ public class LabNum6 {
 
 				if (word == 'a' || word == 'e' || word == 'i' || word == 'o' || word == 'u' ||word == 'A' || word == 'E' || word == 'I' || word == 'O' || word == 'U') {
 
-					System.out.print(FirstletterVowel(wordEnglish[i]) + " ");
+					System.out.print(FirstLetterVowel(wordEnglish[i]) + " ");
 				} else {
 
-					System.out.print(FirstletterConsonant(wordEnglish[i]) + " ");
+					System.out.print(FirstLetterConsonant(wordEnglish[i]) + " ");
 				}
 			}
 			System.out.println("");
@@ -51,13 +51,13 @@ public class LabNum6 {
 	}
 
 	// this mothed to translate the word start with vowals
-	public static String FirstletterVowel(String word) {
+	public static String FirstLetterVowel(String word) {
 
 		return word.concat("way");
 	}
 
 	// this mothed to translate the word start with consonant
-	public static String FirstletterConsonant(String word) {
+	public static String FirstLetterConsonant(String word) {
 		// sign the word length to j
 		int j = word.length();
 		// loop to determine the first vowal
